@@ -7,7 +7,7 @@ try Raspbian images(2018-2020), They are the supported OS images.
 ## Lesson 1 - How to Set Up TensorFlow Lite on the Raspberry Pi
 
 ### Step 1. Check Python Version in Raspberry Pi
-In this tutorial Tensorflow Lite installation currently supported python version is 3.5, 3.6, 3.7 & 3.8 ..
+In this tutorial Tensorflow Lite installation currently supported python version is 3.5, 3.6, 3.7 & 3.8 (3.9 sometime came package or library missing issue)..
 ```
 python3 --version
 ```
@@ -29,7 +29,7 @@ Unzip the Folder "Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Te
 ```
 uzip Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite
 ```
-### Step 4 Create New Directory
+### Step 4. Create New Directory
 Create New Dir at (/home/pi/)
 ```
 mkdir tflite1
@@ -43,7 +43,7 @@ Work in this "/home/pi/tflite1" directory.
 cd /home/pi/tflite1
 pwd
 ```
-### Step 5 Create a Virtual Environment called "tflite1-env".
+### Step 5. Create a Virtual Environment called "tflite1-env".
 Intall Virtualenv
 ```
 sudo pip3 install virtualenv
@@ -56,7 +56,7 @@ Activate Virtual Environment
 ```
 source tflite1-env/bin/activate
 ```
-### Step 6 Install TensorFlow & Other Dependencies.
+### Step 6. Install TensorFlow & Other Dependencies.
 OpenCV  required packages and other libraries mention in .sh (shell) script. it will automatically download and installed.
 ```
 bash install_tflite_requirements.sh
@@ -65,7 +65,7 @@ Install Tensorflow
 ```
 pip3 install tensorflow==1.14
 ```
-### Step 7 Download Google's sample TFLite model
+### Step 7. Download Google's sample TFLite model
 SSDLite-MobileNet-v2 object detection model run on TensorFlow Lite
 ```
 wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
@@ -78,18 +78,18 @@ tar -xvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz -d Sample_TFLite_model
 Do not Download Google's SSDLite-MobileNet-v2 object detection model(step 7).
 Copy your own custom Model File to Sample_TFLite_model.**
 
-### Step 8 Run the TensorFlow Lite Object Detection Model Only
+### Step 8. Run the TensorFlow Lite Object Detection Model Only
 **Checklist**
 -0   Setup your webcam or Picamera plugged in  
 -1   Enabled camera interface in Raspberry Pi
-     (Click the raspberry icon in the top left corner of the screen, select--> Preferences --> Raspberry Pi Configuration, and go to the Interfaces tab and verify Camera is set to Enabled. After reboot the Raspberry Pi.)
+     (Click the raspberry icon in the top left corner of the screen, select--> Preferences --> Raspberry Pi Configuration, and go to the Interfaces tab and verify Camera is set      to Enabled. After reboot the Raspberry Pi.)
 -2   Closing applications you aren't using and free up memory. 
--3   Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.)
+-3   Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.
 This command for run  object detection model only.
 ```
 python3 object_only_webcam.py --modeldir=Sample_TFLite_model
 ```
-### Step 9 Run the TensorFlow Lite Object Detection Model with Voice Feedback.
+### Step 9. Run the TensorFlow Lite Object Detection Model with Voice Feedback.
 Intall "pyttsx3" Text to Speech (TTS) library for Python 2 and 3
 ```
 pip install pyttsx3
