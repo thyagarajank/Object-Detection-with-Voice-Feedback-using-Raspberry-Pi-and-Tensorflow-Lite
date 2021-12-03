@@ -66,13 +66,13 @@ Install Tensorflow
 pip3 install tensorflow==1.14
 ```
 ### Step 7. Download Google's sample TFLite model
-SSDLite-MobileNet-v2 object detection model run on TensorFlow Lite
+coco_ssd_mobilenet_v1_1.0_quant_2018_06_29 object detection model run on TensorFlow Lite
 ```
-wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
 ```
 Unzip the download folder.
 ```
-tar -xvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz -d Sample_TFLite_model
+unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d Sample_TFLite_model
 ```
 **NOTE: If use own custom detection model.
 Do not Download Google's SSDLite-MobileNet-v2 object detection model(step 7).
