@@ -18,24 +18,24 @@ sudo apt update && sudo apt install rpi-update
 ```
 ### Step 3. Download My Github Repository
 
-Next step, clone My GitHub repository
+clone My GitHub repository
 
 ```
 git clone https://github.com/thyagarajank/Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite.git
 ```
 
-Unzip the Folder "Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite". Copy the all files to "tflite1" folder.
+Unzip the Folder "Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite". Move the all files to "tflite1" folder.
 
 ```
 uzip Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite
 ```
-
+Create New Dir at (/home/pi/)
 ```
 mkdir tflite1
 ```
-
+Move all Files to 'tflite1'
 ```
-cp -rvf Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite tflite1
+mv Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite tflite1
 ```
 
 ```
