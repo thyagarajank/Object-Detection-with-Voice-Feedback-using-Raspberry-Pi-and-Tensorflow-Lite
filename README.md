@@ -87,7 +87,7 @@ Copy your own custom Model File to Sample_TFLite_model.**
 -3   Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.)
 This command for run  object detection model only.
 ```
-python3 TFLite_webcam.py --modeldir=Sample_TFLite_model
+python3 object_only_webcam.py --modeldir=Sample_TFLite_model
 ```
 ### Step 9 Run the TensorFlow Lite Object Detection Model with Voice Feedback.
 Intall "pyttsx3" Text to Speech (TTS) library for Python 2 and 3
@@ -100,5 +100,5 @@ sudo apt-get update && sudo apt-get install espeak
 ```
 This command for run object detection with voice feedback.
 ```
-python3 object_voice.py --modeldir=Sample_TFLite_model
+python3 object_voice_webcam.py --modeldir=Sample_TFLite_model
 ```
