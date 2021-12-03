@@ -16,7 +16,7 @@ python3 --version
 ```
 sudo apt update && sudo apt install rpi-update
 ```
-### Step 3. Download My Github Repository
+### Step 3. Download & Unzip My Github Repository
 
 clone My GitHub repository
 
@@ -29,16 +29,44 @@ Unzip the Folder "Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Te
 ```
 uzip Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite
 ```
+### Step 4 Create New Directory
 Create New Dir at (/home/pi/)
 ```
 mkdir tflite1
 ```
-Move all Files to 'tflite1'
+Move all Files to "tflite1"
 ```
 mv Object-Detection-with-Voice-Feedback-using-Raspberry-Pi-and-Tensorflow-Lite tflite1
 ```
-
+Work in this "/home/pi/tflite1" directory.
 ```
 cd /home/pi/tflite1
-
+pwd
+```
+### Step 5 Create a Virtual Environment called "tflite1-env".
+Intall Virtualenv
+```
+sudo pip3 install virtualenv
+```
+Create the "tflite-env" Virtual Environment
+```
+python3 -m venv tflite1-env
+```
+Activate Virtual Environment
+```
+source tflite1-env/bin/activate
+```
+### Step 6 Install TensorFlow & Other Dependencies.
+OpenCV  required packages and other libraries mention in .sh (shell) script. it will automatically download and installed.
+```
+bash install_tflite_requirements.sh
+```
+Install Tensorflow
+```
+pip3 install tensorflow==1.14
+```
+### Step 7 Download Google's sample TFLite model
+SSDLite-MobileNet-v2 object detection model run on TensorFlow Lite
+```
+wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 ```
