@@ -80,11 +80,11 @@ Copy your own custom Model File to Sample_TFLite_model.**
 
 ### Step 8. Run the TensorFlow Lite Object Detection Model Only
 **Checklist**
--0   Setup your webcam or Picamera plugged in  
--1   Enabled camera interface in Raspberry Pi
+- 1. Setup your webcam or Picamera plugged in  
+- 2. Enabled camera interface in Raspberry Pi
      (Click the raspberry icon in the top left corner of the screen, select--> Preferences --> Raspberry Pi Configuration, and go to the Interfaces tab and verify Camera is set      to Enabled. After reboot the Raspberry Pi.)
--2   Closing applications you aren't using and free up memory. 
--3   Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.
+- 3.   Closing applications you aren't using and free up memory. 
+- 4.  Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.
 This command for run  object detection model only.
 ```
 python3 object_only_webcam.py --modeldir=Sample_TFLite_model
