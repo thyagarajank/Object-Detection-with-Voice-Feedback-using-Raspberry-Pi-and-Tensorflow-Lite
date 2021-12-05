@@ -14,7 +14,10 @@ python3 --version
 ### Step 2. Update the Raspberry Pi
 
 ```
-sudo apt update && sudo apt install rpi-update
+sudo apt update
+```
+```
+sudo apt install rpi-update
 ```
 ### Step 3. Download & Unzip My Github Repository
 
@@ -56,14 +59,10 @@ Activate Virtual Environment
 ```
 source tflite1-env/bin/activate
 ```
-### Step 6. Install TensorFlow & Other Dependencies.
+### Step 6. Install TensorFlow Lite & Other Dependencies.
 OpenCV  required packages and other libraries mention in .sh (shell) script. it will automatically download and installed.
 ```
 bash install_tflite_requirements.sh
-```
-Install Tensorflow
-```
-pip3 install tensorflow==1.14
 ```
 ### Step 7. Download Google's sample TFLite model
 coco_ssd_mobilenet_v1_1.0_quant_2018_06_29 object detection model run on TensorFlow Lite
@@ -78,7 +77,7 @@ unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip -d Sample_TFLite_model
 Do not Download Google's SSDLite-MobileNet-v2 object detection model(step 7).
 Copy your own custom Model File to Sample_TFLite_model.**
 
-### Step 8. Run the TensorFlow Lite Object Detection Model Only
+## Lesson 2 - Run Object Detection in TensorFlow Lite 
 **Checklist**
 - 1. Setup your webcam or Picamera plugged in  
 - 2. Enabled camera interface in Raspberry Pi
@@ -86,19 +85,33 @@ Copy your own custom Model File to Sample_TFLite_model.**
 - 3.   Closing applications you aren't using and free up memory. 
 - 4.  Before running the command, make sure the tflite1-env environment is active. (tflite1-env) appears in front of the terminial.
 This command for run  object detection model only.
+### Step 8. Run the TensorFlow Lite Object Detection Model Only
+Webcam Image object Detection Python Program.
 ```
 python3 object_only_webcam.py --modeldir=Sample_TFLite_model
 ```
-### Step 9. Run the TensorFlow Lite Object Detection Model with Voice Feedback.
+### Step 9. Install Text to Speech Packages.
+- 1. pyttx3  
+- 2. espeak
 Intall "pyttsx3" Text to Speech (TTS) library for Python 2 and 3
 ```
 pip install pyttsx3
 ```
 Install espeak library
 ```
-sudo apt-get update && sudo apt-get install espeak
+sudo apt-get install espeak
 ```
-This command for run object detection with voice feedback.
+### Issue in install espeak Package
+Try this 2 Command
+```
+sudo apt update && sudo apt install rpi-update
+```
+```
+sudo apt-get install python-espeak
+```
+### Step 10. Run the TensorFlow Lite Object Detection Model with Voice Feedback.
+This Python Program for run object detection with voice feedback.
 ```
 python3 object_voice_webcam.py --modeldir=Sample_TFLite_model
 ```
+## Lesson 3 - Train own Object Detection Model
