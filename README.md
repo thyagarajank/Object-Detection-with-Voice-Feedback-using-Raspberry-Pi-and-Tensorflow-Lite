@@ -116,5 +116,5 @@ python3 object_voice_webcam.py --modeldir=Sample_TFLite_model
 ```
 ## Lesson 3 - Train own Custom Object Detection Model
 https://github.com/thyagarajank/tensorflow-own-custom-object-detection-model-in-google-colab
-Tensorflow (.pb) Custom Model Training In colab (Availble) check link
+Tensorflow (.pb file) Custom Model Training In colab (Code Availble in My Github).
 Tensorflow(.pb) file to Tensorflow Lite (.tflite) file Convertion Program (Upload Soon).
